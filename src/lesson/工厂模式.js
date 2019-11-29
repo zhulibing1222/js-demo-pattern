@@ -7,6 +7,12 @@ class People {
     say(msg) { alert(msg); }
 }
 
-export default function (name, age) {
-    return new People(name, age);
+class Creator {
+    create(name, age) {
+        return new People(name, age);
+    }
 }
+
+let creator = new Creator();
+const people = creator.create('xiao zhang', 23);
+
